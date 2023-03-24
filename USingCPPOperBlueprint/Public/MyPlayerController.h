@@ -16,9 +16,10 @@ class CESHIDABAO_API AMyPlayerController : public APlayerController
 public:
 	virtual void BeginPlay() override;
 private:
+	const AActor* GetAActorFromClassPath(const FString& ClassPath, TArray<AActor*>& FindArray) const;
 	void InitActorAndObject();
 	AActor* SpawnActor(const FString& ClassPath);
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	AActor* HelloBlueprint;
+	const AActor* HelloBlueprint;
 };
